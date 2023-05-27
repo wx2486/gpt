@@ -7,6 +7,9 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 ADD . /app
 
+# Copy the app.py, cert.pem, key.pem and any other necessary files
+COPY app.py cert.pem key.pem ./
+
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir flask
 
