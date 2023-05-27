@@ -6,4 +6,4 @@ def home():
     return "Hello, Docker!"
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=443, ssl_context=('cert.pem', 'key.pem'))
+    app.run(host='0.0.0.0', port=443, ssl_context=('/etc/letsencrypt/live/gpt.wx2486.me/fullchain.pem', '/etc/letsencrypt/live/gpt.wx2486.me/privkey.pem'))
