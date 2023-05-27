@@ -8,7 +8,7 @@ WORKDIR /app
 ADD . /app
 
 # Copy the app.py, cert.pem, key.pem and any other necessary files
-COPY /etc/letsencrypt/live/gpt.wx2486.me/fullchain.pem /etc/letsencrypt/live/gpt.wx2486.me/privkey.pem ./
+COPY fullchain.pem privkey.pem ./
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir flask
