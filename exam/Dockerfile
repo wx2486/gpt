@@ -10,8 +10,8 @@ ADD . /app
 # Copy the app.py, cert.pem, key.pem and any other necessary files
 COPY fullchain.pem privkey.pem ./
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir flask
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Make port 443 available to the world outside this container
 EXPOSE 443
